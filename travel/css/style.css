@@ -1,0 +1,234 @@
+body {
+  background-color: #f6f9fc;
+  font-family: system-ui, Arial;
+  color: #222;
+  margin: 0;
+}
+
+main section {
+  padding: 3.5rem 1.5rem;
+}
+
+.section-heading {
+  text-align: center;
+  max-width: 40rem;
+  margin: 0 auto 2rem auto;
+}
+
+.section-heading h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.section-heading p {
+  font-size: 1rem;
+  color: #555;
+}
+
+header {
+  background-color: white;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+#header-container {
+  max-width: 70rem;
+  margin: auto;
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0077ff;
+}
+
+#desktop-nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  color: #333;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 3px;
+  transition: 0.2s;
+}
+
+#desktop-nav a:hover {
+  color: #0077ff;
+  border-color: #0077ff;
+}
+
+#menu-toggle {
+  display: none;
+  background: #0077ff;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+}
+
+#mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: white;
+  border-top: 1px solid #ddd;
+}
+
+#mobile-menu a {
+  padding: 14px;
+  text-decoration: none;
+  color: #222;
+  border-bottom: 1px solid #eee;
+}
+
+.hero {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+}
+
+.btn {
+  padding: 12px 26px;
+  background: #ff7b54;
+  color: white;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background: #ff5a26;
+}
+
+#features {
+  max-width: 70rem;
+  margin: auto;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.feature-box {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+#destinations {
+  max-width: 70rem;
+  margin: auto;
+}
+
+.destinations-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.destination-card {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.destination-card img {
+  width: 100%;
+}
+
+.destination-content {
+  padding: 1rem;
+}
+
+#contact {
+  max-width: 36rem;
+  margin: auto;
+}
+
+.contact-form {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.contact-form button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #0077ff;
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: white;
+  margin-top: 20px;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  #desktop-nav {
+    display: none;
+  }
+
+  #menu-toggle {
+    display: block;
+  }
+
+  .destinations-grid,
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .destinations-grid,
+  .features-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
